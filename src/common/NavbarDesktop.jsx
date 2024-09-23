@@ -70,13 +70,6 @@ const NavbarDesktop = () => {
           <a href="#help" className="red-text">Help & Contact Us</a>
         </div>
       </div>
-      <div className="breadcrumb">
-       <Link to="/" className="breadcrumb-link">Home</Link>
-        <span className="divider">/</span>
-        <Link to="/category" className="breadcrumb-link">Category</Link>
-        <span className="divider">/</span>
-        <Link to="/subcategory" className="breadcrumb-link">Subcategory</Link>
-      </div>
     </>
   );
 };
