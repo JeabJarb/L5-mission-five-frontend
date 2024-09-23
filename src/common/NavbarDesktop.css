@@ -119,16 +119,3 @@
     text-decoration: underline; 
     background-color: rgba(255, 255, 255, 0.2); 
 }
-
-/* Breadcrumb styles */
-.breadcrumb {
-    padding: 10px;
-    font-size: 14px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.breadcrumb .divider {
-    margin: 0 5px; 
-}
