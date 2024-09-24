@@ -1,13 +1,13 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import ProductListing from './pages/ProductItem/ProductListing'
+import ProductListing from './pages/ProductListing/ProductListing'
 
 function App() {
 
   return (
     <>
       <Routes>
-        <Route path="/productitem" element={<ProductListing />} />
+        <Route path="/productlisting" element={<ProductListing />} />
       </Routes>
     </>
   )
