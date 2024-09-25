@@ -15,7 +15,7 @@ const Navbar = () => {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isDesktop]); // Keep isDesktop in dependencies to check for changes
+  }, [isDesktop]); 
 
   return isDesktop ? <DesktopNavbar /> : <MobileNavbar />;
 };

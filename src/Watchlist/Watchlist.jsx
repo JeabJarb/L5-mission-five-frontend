@@ -75,7 +75,7 @@ const App = () => {
               location={item.location}
               buy_now={item.buy_now}
               current_bid={item.current_bid}
-              image={item.image}  // Ensure the image is passed correctly
+              image={item.image} 
             />
           ))}
         </div>
