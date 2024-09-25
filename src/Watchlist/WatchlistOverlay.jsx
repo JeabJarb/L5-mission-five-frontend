@@ -8,12 +8,12 @@ const WatchlistOverlay = ({
   location = 'Unknown Location',
   buy_now = null,
   current_bid = null,
-  image, // Ensure image is correctly passed in
+  image, 
   onSelect,
   selected
 }) => {
   console.log(image);
-  // Function to format the closing date
+
   const formatClosingDate = (dateString) => {
     const date = new Date(dateString);
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
@@ -35,12 +35,12 @@ const WatchlistOverlay = ({
             alt={title}
             className="item-image"
             onError={(e) => {
-              e.target.src = 'path/to/placeholder-image.png'; // Fallback image if original fails to load
+              e.target.src = 'path/to/placeholder-image.png'; 
             }}
           />
         ) : (
           <img
-            src="path/to/placeholder-image.png" // Display placeholder if no image is provided
+            src="path/to/placeholder-image.png" 
             alt="Placeholder"
             className="item-image"
           />
