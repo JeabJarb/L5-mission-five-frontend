@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  font-family: "Roboto";
+}
+
 .footer-red-block {
     background-color: #E34647; 
     width: 100%; 
@@ -38,7 +44,6 @@
 .footer-links {
     display: flex;
     gap: 100px;
-    font-family: Roboto, sans-serif; 
     font-size: var(--fontSize-heading-h3, 20px);
     font-style: normal;
     font-weight: 500;
@@ -69,7 +74,6 @@
 .property-text,
 .services-text,
 .community-text {
-    font-family: Roboto, sans-serif; 
     font-size: var(--fontSize-body-label, 18px); 
     font-style: normal; 
     font-weight: 500; 
@@ -132,7 +136,6 @@
 .quinary-link, 
 .senary-link {
     color: var(--colours-font-body, #666); 
-    font-family: Roboto, sans-serif; 
     font-size: var(--fontSize-body-secondary, 14px); 
     font-style: normal; 
     font-weight: 400; 
@@ -149,8 +152,7 @@
 }
 
 .footer-text {
-    color: var(--neutral-default, #666);
-    font-family: Roboto, sans-serif; 
+    color: var(--neutral-default, #666); 
     font-size: var(--fontSize-body-secondary, 14px);
     font-style: normal;
     font-weight: 400;
@@ -166,7 +168,6 @@
 
 .footer-additional-links .footer-link {
     color: var(--neutral-default, #666); 
-    font-family: Roboto, sans-serif; 
     font-size: var(--fontSize-body-secondary, 14px); 
     font-style: normal; 
     font-weight: 400; 
