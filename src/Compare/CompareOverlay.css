@@ -1,0 +1,261 @@
+:root {
+    --colours-font-extra-dark: #222; 
+    --type-fontFamily-body: 'Roboto', helvetica; 
+    --fontSize-body-small: 12px; 
+    --lineHeight-body-small: 16px; 
+    --fontSize-heading-h2: 24px; 
+}
+
+.compare-overlay-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    padding: 16px; 
+}
+
+.compare-overlay {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px; 
+    max-width: 350px; 
+    margin: 8px; 
+    transition: box-shadow 0.2s; 
+}
+.compare-overlay img {
+    width: 360px;             
+    height: 240px;            
+    flex-shrink: 0;           
+    object-fit: contain;      
+    margin-bottom: 15px;      
+    margin-left: -5px;
+}
+
+.compare-overlay:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.title {
+    color: var(--colours-font-extra-dark);
+    font-family: var(--type-fontFamily-body);
+    font-size: var(--fontSize-heading-h3, 20px);
+    font-weight: 500;
+    line-height: 24px; 
+    margin-bottom: 16px; 
+}
+
+.product-details {
+    color: var(--colours-font-extra-dark);
+    font-family: var(--type-fontFamily-body);
+    font-size: var(--fontSize-body-secondary, 14px);
+    font-weight: 400;
+    line-height: var(--lineHeight-body-secondary, 18px); 
+    display: flex;
+    justify-content: flex-start; 
+    padding: 8px 0; 
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+.product-details:last-child {
+    border-bottom: none; 
+}
+
+.product-details-heading {
+    color: var(--colours-font-extra-dark);
+    font-family: var(--type-fontFamily-body);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 8px; 
+}
+
+.alt-bg {
+    background-color: #F7F7F7; 
+}
+
+.alt-bg-white {
+    background-color: #FFFFFF; 
+}
+
+.product-details strong {
+    margin-right: 4px; 
+}
+
+.compare-current-bid-section,
+.compare-buy-now-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-bottom: 16px; 
+}
+
+.compare-current-bid-label,
+.compare-buy-now-label {
+    color: var(--colours-font-extra-dark); 
+    font-family: var(--type-fontFamily-body); 
+    font-size: var(--fontSize-body-small); 
+    font-weight: 400; 
+    line-height: var(--lineHeight-body-small); 
+    margin-bottom: -25px; 
+}
+
+.compare-current-bid-value,
+.compare-buy-now-value {
+    color: var(--colours-font-extra-dark); 
+    font-family: var(--type-fontFamily-heading, var(--type-fontFamily-body)); 
+    font-size: var(--fontSize-heading-h2); 
+    font-weight: 700; 
+    line-height: 36px; 
+}
+
+.compare-price-section {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-bottom: 16px; 
+}
+
+.product-details {
+    color: var(--colours-font-extra-dark);
+    font-family: var(--type-fontFamily-body);
+    font-size: var(--fontSize-body-secondary, 14px);
+    font-weight: 400;
+    line-height: var(--lineHeight-body-secondary, 18px);
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0; 
+    margin-bottom: 4px;
+}
+
+.product-detail {
+    display: flex;
+    justify-content: space-between; 
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+.product-detail strong {
+    flex: 1; 
+    color: var(--colours-font-extra-dark, #222);
+    font-family: var(--type-fontFamily-body, Roboto);
+    font-size: var(--fontSize-body-secondary, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--lineHeight-body-secondary, 18px); 
+    margin-right: 16px; 
+    text-align: left; 
+}
+
+.product-detail span {
+    flex: 1.5; 
+    color: var(--colours-font-extra-dark); 
+    font-family: var(--type-fontFamily-body); 
+    font-size: var(--fontSize-body-small); 
+    font-weight: 400; 
+    line-height: var(--lineHeight-body-small); 
+    text-align: left; 
+    white-space: nowrap; 
+}
+
+.product-details-heading {
+    color: var(--colours-font-extra-dark, #222);
+    font-family: 'Roboto', helvetica; 
+    font-size: 16px; 
+    font-style: normal; 
+    font-weight: 700; 
+    line-height: 110%; 
+    margin-top: 16px; 
+}
+
+.closing-date {
+    margin-top: -30px; 
+    margin-bottom: 16px; 
+    flex: 1; 
+    color: var(--colours-font-dark, #444);
+    font-family: var(--type-fontFamily-body, roboto);
+    font-size: var(--fontSize-body-secondary, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--lineHeight-body-secondary, 18px); 
+}
+
+.year-manufactured {
+    display: flex; 
+    align-items: center; 
+    white-space: nowrap; 
+}
+
+.year-manufactured strong,
+.year-manufactured span {
+    margin-right: 12px; 
+    display: inline; 
+}
+
+.inline-flex {
+    display: flex;
+    align-items: flex-start; 
+    background-color: #F7F7F7;
+}
+
+.values-background {
+    margin-left: 55px; 
+    margin-top: -15px; 
+    display: flex;
+    flex-direction: column; 
+    background-color: transparent; 
+    padding: 10px; 
+    width: 300px; 
+    max-width: 300px; 
+}
+
+.value-item {
+    padding: 8px; 
+}
+
+.product-detail {
+    display: flex;
+    align-items: flex-start; 
+}
+
+.compare-condition-label{
+    color: var(--colours-font-dark, #444);
+    font-family: 'Roboto', helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; 
+}
+
+.button-section {
+    display: flex;
+    width: 320px; /* Fixed width for the button section */
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 16px; /* Space between buttons */
+    margin-top: 16px; /* Add space above the button section */
+    margin-left: 10px;
+  }
+  
+  /* Button styles */
+  .compare-bid-button,
+  .compare-buy-button {
+    flex: 1; /* Allow buttons to fill available space */
+    padding: 8px 16px; /* Inner padding */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    color: white; /* White text for both buttons */
+  }
+  
+  .compare-bid-button,
+  .compare-buy-button {
+    background-color: #148FE2; /* Blue for Place Bid */
+  }
+  
+  .compare-bid-button:hover,
+  .compare-buy-button:hover {
+    background-color: #1179B3; /* Darker shade on hover for Place Bid */
+  }
+  
+  
