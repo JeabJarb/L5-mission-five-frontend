@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  font-family: "Roboto";
+}
+
 .PrimaryNav {
     width: 1440px;
     height: 196px;
@@ -31,7 +37,7 @@
   
   .BreadcrumbText, .BreadcrumbSlash {
     font-size: 14px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', helvetica;
     font-weight: 400;
     line-height: 18px;
   }
@@ -47,7 +53,7 @@
   .SectionText .SecondaryHeadline {
     color: #21272A;
     font-size: 32px;
-    font-family: Roboto sans-serif;
+    font-family: 'Roboto' helvetica;
     font-weight: 700;
     line-height: 35px;
   }
@@ -64,7 +70,7 @@
     left: 80px;
     top: 54px;
     font-size: 16px;
-    font-family: Roboto sans-serif;
+    font-family: 'Roboto', helvetica;
     line-height: 18px;
   }
   
@@ -131,4 +137,60 @@
     gap: 48px;
     padding: 151px 80px;
   }
-  
+
+.WatchlistContainer {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 16px; 
+  justify-content: flex-start; 
+  padding: 20px; 
+}
+
+.overlay-card {
+  width: 308px; 
+  height: 540px; 
+  background: white;
+  border: 1px solid #e9e9e9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.overlay-card.selected {
+  border: 2px solid red;
+}
+
+.compare-button {
+  display: inline-flex;
+  height: 40px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  border-radius: var(--border-radius-200, 8px);
+  background: var(--colours-surface-action, #148FE2);
+  color: white; 
+  border: none; 
+  cursor: pointer; 
+  font-size: 16px; 
+  margin: 16px 0; 
+}
+
+.compare-button:hover {
+  background-color: #1178c7; 
+}
+
+.compare-button-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  margin: 20px 0; 
+}
+
