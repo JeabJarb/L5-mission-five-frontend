@@ -1,9 +1,32 @@
+import { useState } from "react";
 import Navbar from "../../common/Navbar";
 import Breadcrumb from "../../common/Breadcrumb";
 import Footer from "../../common/Footer";
 import style from "./ProductListing.module.css";
 
+const Overlay = ({ onClose, children }) => {
+  return (
+    <div className={style.overlay}>
+      <div className={style.overlayBackground}>
+        <div className={style.overlayContainer}>
+          <div className={style.overlayControls}>
+            <button className={style.overlayClose} onClick={onClose} />
+          </div>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function ProductListing() {
+  const [isOverlayListingDetailsOpen, setIsOverlayListingDetailsOpen] =
+    useState(false);
+  const [isOverlayPlaceBidOpen, setIsOverlayPlaceBidOpen] = useState(false);
+  const [isAutoBidCheck, setIsAutoBidCheck] = useState(false);
+  const bidText = isAutoBidCheck ? "Maximum bid*" : "Your bid*";
+  const reviewAutoBid = isAutoBidCheck ? "Review Auto-bid" : "Review Bid";
+
   return (
     <div>
       <Navbar />
@@ -29,7 +52,107 @@ function ProductListing() {
                       className={style.icon}
                       src="/assets/icons/List.svg"
                       alt="list"
+                      onClick={() =>
+                        setIsOverlayListingDetailsOpen(
+                          !isOverlayListingDetailsOpen
+                        )
+                      }
                     />
+                    {isOverlayListingDetailsOpen && (
+                      <Overlay
+                        onClose={() => setIsOverlayListingDetailsOpen(false)}
+                      >
+                        <div>
+                          <div className={style.overlayProductHeader}>
+                            Product Details
+                          </div>
+                          <div>
+                            <div className={style.overlayDetailsContainer}>
+                              <div className={style.productDetailTableColour}>
+                                <div className={style.productDetails}>
+                                  Condition
+                                </div>
+                                <div className={style.details}>
+                                  Used: An item that has been used previously.
+                                  The item may have some signs of cosmetic wear,
+                                  but is fully operational and fuctions as
+                                  intended
+                                </div>
+                              </div>
+                              <div className={style.productDetailTable}>
+                                <div className={style.productDetails}>
+                                  Colour
+                                </div>
+                                <div className={style.details}>Grey</div>
+                              </div>
+                              <div className={style.productDetailTableColour}>
+                                <div className={style.productDetails}>
+                                  Item Length
+                                </div>
+                                <div className={style.details}>90 cm</div>
+                              </div>
+                              <div className={style.productDetailTable}>
+                                <div className={style.productDetails}>
+                                  Item Width
+                                </div>
+                                <div className={style.details}>220 cm</div>
+                              </div>
+                              <div className={style.productDetailTableColour}>
+                                <div className={style.productDetails}>
+                                  Item Height
+                                </div>
+                                <div className={style.details}>80 cm</div>
+                              </div>
+                              <div className={style.productDetailTable}>
+                                <div className={style.productDetails}>
+                                  Item Weight
+                                </div>
+                                <div className={style.details}>50 kg</div>
+                              </div>
+                              <div className={style.productDetailTableColour}>
+                                <div className={style.productDetails}>
+                                  Upholstery Material
+                                </div>
+                                <div className={style.details}>Fabric</div>
+                              </div>
+                              <div className={style.productDetailTable}>
+                                <div className={style.productDetails}>
+                                  Features
+                                </div>
+                                <div className={style.details}>
+                                  3-seater, Modular
+                                </div>
+                              </div>
+                              <div className={style.productDetailTableColour}>
+                                <div className={style.productDetails}>
+                                  Manufacturer
+                                </div>
+                                <div className={style.details}>
+                                  <div className={style.manufacturerDetails}>
+                                    <div>Brand:</div>
+                                    <div>Freedom Furniture</div>
+                                  </div>
+                                  <div className={style.manufacturerDetails}>
+                                    <div>Make:</div>
+                                    <div>Mario</div>
+                                  </div>
+                                  <div className={style.manufacturerDetails}>
+                                    <div>Model:</div>
+                                    <div>Bellini</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className={style.productDetailTable}>
+                                <div className={style.productDetails}>
+                                  Year Manufactured
+                                </div>
+                                <div className={style.details}>2010</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </Overlay>
+                    )}
                     <img
                       className={style.icon}
                       src="/assets/icons/Message.svg"
@@ -273,7 +396,92 @@ function ProductListing() {
                 className={style.icon}
                 src="/assets/icons/List.svg"
                 alt="list"
+                onClick={() =>
+                  setIsOverlayListingDetailsOpen(!isOverlayListingDetailsOpen)
+                }
               />
+              {isOverlayListingDetailsOpen && (
+                <Overlay onClose={() => setIsOverlayListingDetailsOpen(false)}>
+                  <div>
+                    <div className={style.overlayProductHeader}>
+                      Product Details
+                    </div>
+                    <div>
+                      <div className={style.overlayDetailsContainer}>
+                        <div className={style.productDetailTableColour}>
+                          <div className={style.productDetails}>Condition</div>
+                          <div className={style.details}>
+                            Used: An item that has been used previously. The
+                            item may have some signs of cosmetic wear, but is
+                            fully operational and fuctions as intended
+                          </div>
+                        </div>
+                        <div className={style.productDetailTable}>
+                          <div className={style.productDetails}>Colour</div>
+                          <div className={style.details}>Grey</div>
+                        </div>
+                        <div className={style.productDetailTableColour}>
+                          <div className={style.productDetails}>
+                            Item Length
+                          </div>
+                          <div className={style.details}>90 cm</div>
+                        </div>
+                        <div className={style.productDetailTable}>
+                          <div className={style.productDetails}>Item Width</div>
+                          <div className={style.details}>220 cm</div>
+                        </div>
+                        <div className={style.productDetailTableColour}>
+                          <div className={style.productDetails}>
+                            Item Height
+                          </div>
+                          <div className={style.details}>80 cm</div>
+                        </div>
+                        <div className={style.productDetailTable}>
+                          <div className={style.productDetails}>
+                            Item Weight
+                          </div>
+                          <div className={style.details}>50 kg</div>
+                        </div>
+                        <div className={style.productDetailTableColour}>
+                          <div className={style.productDetails}>
+                            Upholstery Material
+                          </div>
+                          <div className={style.details}>Fabric</div>
+                        </div>
+                        <div className={style.productDetailTable}>
+                          <div className={style.productDetails}>Features</div>
+                          <div className={style.details}>3-seater, Modular</div>
+                        </div>
+                        <div className={style.productDetailTableColour}>
+                          <div className={style.productDetails}>
+                            Manufacturer
+                          </div>
+                          <div className={style.details}>
+                            <div className={style.manufacturerDetails}>
+                              <div>Brand:</div>
+                              <div>Freedom Furniture</div>
+                            </div>
+                            <div className={style.manufacturerDetails}>
+                              <div>Make:</div>
+                              <div>Mario</div>
+                            </div>
+                            <div className={style.manufacturerDetails}>
+                              <div>Model:</div>
+                              <div>Bellini</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className={style.productDetailTable}>
+                          <div className={style.productDetails}>
+                            Year Manufactured
+                          </div>
+                          <div className={style.details}>2010</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Overlay>
+              )}
               <img
                 className={style.icon}
                 src="/assets/icons/Message.svg"
@@ -310,10 +518,148 @@ function ProductListing() {
                   </div>
                 </div>
               </div>
-              <button className={style.placeBidBtn}>
+              <button
+                className={style.placeBidBtn}
+                onClick={() => setIsOverlayPlaceBidOpen(!isOverlayPlaceBidOpen)}
+              >
                 <img src="/assets/icons/Group 65.svg" alt="place-bid" />
                 <div className={style.placeBid}>Place Bid</div>
               </button>
+              {isOverlayPlaceBidOpen && (
+                <Overlay onClose={() => setIsOverlayPlaceBidOpen(false)}>
+                  <div>
+                    <div className={style.overlayPlaceBidHeader}>
+                      Place a bid
+                    </div>
+                    <div className={style.overlayPlaceBidContainer}>
+                      <div
+                        className={
+                          style.overlayPlaceBidProductDisplayBackground
+                        }
+                      >
+                        <div
+                          className={
+                            style.overlayPlaceBidProductDisplayContainer
+                          }
+                        >
+                          <img
+                            className={style.overlayImg}
+                            src="/images/sofa-3seater.png"
+                            alt="Image"
+                          />
+                          <div className={style.overlayPlaceBidListingDetails}>
+                            <div className={style.overlayPlaceBidListingName}>
+                              Modular Sofa / 3-seater
+                            </div>
+                            <div
+                              className={style.overlayPlaceBidListingCondition}
+                            >
+                              <div>Condition:</div>
+                              <div>Used - Excellent Condition</div>
+                              <img
+                                className={style.icon}
+                                src="/assets/icons/Group 71.svg"
+                                alt="Help"
+                              />
+                            </div>
+                            <div
+                              className={style.overlayPlaceBidAmountContainer}
+                            >
+                              <div>
+                                <div>Current Bid:</div>
+                                <div
+                                  className={
+                                    style.overlayPlaceBidAmountCurrentNBuyNowDisplay
+                                  }
+                                >
+                                  $500.00
+                                </div>
+                              </div>
+                              <div>
+                                <div>Buy Now:</div>
+                                <div
+                                  className={
+                                    style.overlayPlaceBidAmountCurrentNBuyNowDisplay
+                                  }
+                                >
+                                  $850.00
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <form
+                        className={style.overlayPlaceBidInputProcessContainer}
+                      >
+                        <div className={style.overlayPlaceBidInputHeader}>
+                          {bidText}
+                        </div>
+                        <div className={style.overlayPlaceBidOptionsContainer}>
+                          <input
+                            className={style.overlayPlaceBidInputAmount}
+                            type="text"
+                            placeholder="$500.00"
+                          />
+                          <div className={style.overlayPlaceBidOptions}>
+                            <input
+                              type="checkbox"
+                              onChange={() =>
+                                setIsAutoBidCheck(!isAutoBidCheck)
+                              }
+                            />
+                            <div>Auto-bid</div>
+                            <div
+                              className={style.overPlaceBidMoreInfoContainer}
+                            >
+                              <div>More info</div>
+                              <img
+                                className={style.icon}
+                                src="/assets/icons/Group 71.svg"
+                                alt="Help"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div className={style.overlayPlaceBidNeedHelp}>
+                          Need Help?
+                        </div>
+                        <div>
+                          <div className={style.overlayPlaceBidInputHeader}>
+                            Shipping
+                          </div>
+                          <div
+                            className={
+                              style.overlayPlaceBidShippingOptionsContainer
+                            }
+                          >
+                            <input type="checkbox" />
+                            <div>
+                              <div>Buyer must pick-up*</div>
+                              <div>
+                                Seller is located in Auckland Central, Auckland
+                              </div>
+                            </div>
+                          </div>
+                          <div>*Required fields</div>
+                        </div>
+                      </form>
+                      <div className={style.overlayPlaceBidBtnContainer}>
+                        <button className={style.overlayPlaceBidReviewBidBtn}>
+                          <img
+                            src="/assets/icons/Group 65.svg"
+                            alt="place-bid"
+                          />
+                          <div>{reviewAutoBid}</div>
+                        </button>
+                        <div className={style.overlayPlaceBidGoBack} onClick={() => setIsOverlayPlaceBidOpen(false)}>
+                          Go back to listing
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Overlay>
+              )}
               <div className={style.howToPlaceBid}>How to place a bid</div>
               <div className={style.middleLine}>
                 <div className={style.lineShort}></div>
@@ -351,7 +697,6 @@ function ProductListing() {
             <div className={style.needHelpLink}>Need Help?</div>
           </div>
           <div className={style.sellerInformationHeader}>
-            {" "}
             Seller Information
           </div>
           <div className={style.sellerInformationCard}>
