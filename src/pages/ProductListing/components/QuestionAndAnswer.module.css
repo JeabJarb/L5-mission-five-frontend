@@ -1,0 +1,92 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 0;
+  margin-top: 25px;
+}
+
+.buyerTable,
+.sellerTable {
+  display: grid;
+  grid-template-columns: repeat(2, 25% 75%);
+}
+
+.buyer,
+.seller {
+  display: flex;
+  align-items: center;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px 10px;
+}
+
+.seller {
+  gap: 10px;
+  padding-left: 50px;
+}
+
+.question,
+.answer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px 0 20px 10px;
+  gap: 20px;
+}
+
+.buyerTable {
+  background-color: #f7f7f7;
+}
+
+.answer {
+  padding-left: 50px;
+}
+
+.askQuestionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 25px 0;
+}
+
+.askQuestionBtn {
+  width: 313px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #148fe2;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.questionNAnswer {
+  display: flex;
+  flex-direction: column;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px 0 20px 10px;
+  gap: 5px;
+}
+
+.questionDateNTime,
+.answerDateNTime {
+  font-size: 12px;
+  text-align: right;
+  padding-right: 10px;
+}

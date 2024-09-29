@@ -1,0 +1,44 @@
+.detailsContainer {
+    width: 763px;
+    height: 750px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .productDetailTable,
+  .productDetailTableColour {
+    display: grid;
+    grid-template-columns: repeat(2, 25% 75%);
+  }
+  
+  .productDetailTableColour {
+    background-color: #f7f7f7;
+  }
+  
+  .productDetailsContainer {
+    display: flex;
+    align-items: flex-start;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px 10px;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px 0 20px 10px;
+    gap: 20px;
+  }
+  
+  .manufacturerDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  

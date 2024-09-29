@@ -1,0 +1,8 @@
+.closingDateNTimeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 400;
+  }

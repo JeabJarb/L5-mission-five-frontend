@@ -1,0 +1,91 @@
+.link {
+  text-decoration: none;
+  color: #222
+}
+
+.listingCard {
+  width: 308px;
+  height: auto;
+  border: #b9b9b9 solid 1px;
+}
+
+.listingCard:hover {
+  border: #222 solid 1px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+
+.listingImage {
+  width: 300px;
+  height: 200px;
+}
+
+.listingItemDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 10px;
+}
+
+.listingCloses {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.listingLocation {
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 30px;
+}
+
+.listingName {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.listingCondition {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+.listingConidtion {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.listingStatus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 400;
+  padding-top: 50px;
+}
+
+.listingStatusDetails {
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.current,
+.buyNow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

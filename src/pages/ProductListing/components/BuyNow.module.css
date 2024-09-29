@@ -1,0 +1,12 @@
+.buyNow {
+    font-size: 20px;
+    font-weight: 700;
+    color: #555;
+    text-align: center;
+  }
+
+  .buyNowAmount {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+  }
