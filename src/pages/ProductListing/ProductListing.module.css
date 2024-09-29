@@ -52,6 +52,11 @@
   margin-top: 25px;
 }
 
+.displayImage {
+  width: 720px;
+  height: auto;
+}
+
 .iconsContainer {
   display: flex;
   align-items: center;
@@ -83,21 +88,16 @@
 }
 
 .productDetailTable,
-.productDetailTableColour,
-.buyerTable,
-.sellerTable {
+.productDetailTableColour {
   display: grid;
   grid-template-columns: repeat(2, 25% 75%);
 }
 
-.productDetailTableColour,
-.buyerTable {
+.productDetailTableColour {
   background-color: #f7f7f7;
 }
 
-.productDetails,
-.buyer,
-.seller {
+.productDetails {
   display: flex;
   align-items: flex-start;
   color: #222222;
@@ -106,21 +106,10 @@
   padding: 20px 10px;
 }
 
-.buyer,
-.seller {
-  align-items: center;
-}
-
-.seller {
-  gap: 10px;
-  padding-left: 50px;
-}
-
-.details,
-.question,
-.answer {
+.details {
   display: flex;
-  flex-direction: row;
+  flex-direction: row;;
+  align-items: flex-start;
   color: #222222;
   font-size: 16px;
   font-weight: 400;
@@ -128,12 +117,9 @@
   gap: 20px;
 }
 
-.answer {
-  padding-left: 50px;
-}
-
 .manufacturerDetails {
   display: flex;
+  flex-direction: column;
 }
 
 .productDescription {
@@ -144,46 +130,7 @@
   font-weight: 400;
 }
 
-.askQuestionContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 25px 0;
-}
 
-.askQuestionBtn {
-  width: 313px;
-  height: 40px;
-  border-radius: 8px;
-  background-color: #148fe2;
-  border: none;
-  color: #ffffff;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.questionNAnswer {
-  display: flex;
-  flex-direction: column;
-  color: #222222;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 20px 0 20px 10px;
-  gap: 5px;
-}
-
-.questionDateNTime,
-.answerDateNTime {
-  font-size: 12px;
-  text-align: right;
-  padding-right: 10px;
-}
 
 /* RIGHTSIDE TABLE */
 .placeBidContainer {
@@ -502,73 +449,20 @@
 /* OTHER LISTING ITEMS */
 .showListingItemsContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 50px;
   padding: 100px 0;
 }
 
-.listingCard {
-  border: #b9b9b9 solid 1px;
-}
-
-.listingItemDetails {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px 10px;
-}
-
-.listingCloses {
-  display: flex;
-  justify-content: flex-end;
-  gap: 5px;
-}
-
-.listingLocation {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.listingName {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.listingDescription {
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.listingConidtion {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-  font-size: 10px;
-  font-weight: 400;
-}
-
-.listingStatus {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 10px;
-  font-weight: 400;
-}
-
-.listingStatusDetails {
-  padding-top: 10px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.viewAllContainer {
+.viewMoreContainer {
   display: flex;
   justify-content: center;
   padding-bottom: 100px;
 }
 
-.viewAllBtn {
+.viewMoreBtn {
   height: 56px;
   width: 138px;
   color: #ffffff;
@@ -631,7 +525,7 @@
 .overlayPlaceBidHeader {
   font-size: 20px;
   font-weight: 700;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 }
 
 .overlayDetailsContainer {

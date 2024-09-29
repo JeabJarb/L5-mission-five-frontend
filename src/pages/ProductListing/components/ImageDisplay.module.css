@@ -1,0 +1,70 @@
+.imageDisplay {
+  position: relative;
+  max-width: 720px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.displayContainer {
+  position: relative;
+}
+
+.image {
+  width: 720px;
+  height: auto;
+  height: auto;
+  display: block;
+}
+
+.zoomBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay img {
+  max-width: 90%; /* Scale image to fit within the viewport */
+  max-height: 90%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.zoomBtn:hover,
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}

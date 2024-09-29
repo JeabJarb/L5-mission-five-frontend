@@ -1,0 +1,7 @@
+.productDescription {
+    display: flex;
+    padding: 25px;
+    border: #f7f7f7 solid 1px;
+    font-size: 16px;
+    font-weight: 400;
+  }

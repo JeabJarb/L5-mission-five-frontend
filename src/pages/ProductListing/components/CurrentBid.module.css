@@ -1,0 +1,43 @@
+.listingNumber {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: right;
+}
+
+.currentBid {
+  font-size: 20px;
+  font-weight: 700;
+  color: #555;
+  text-align: center;
+}
+
+.currentBidAmount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+}
+
+.reserveContainer {
+  display: flex;
+  flex-direction: column;
+  color: #444;
+  gap: 0px;
+}
+
+.reserveContainer,
+.reserveConditions,
+.reserveClosing {
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.reserveClosing,
+.reserveConditions {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
